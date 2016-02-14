@@ -1,2 +1,10 @@
 # ReplayGG-OneClick
-Uses Greasemonkey Javascript and LinCastor to streamline the Replay.GG experiece
+Uses Greasemonkey or Tampermonkey and LinCastor to streamline the Replay.GG experience - instead of having to copy-paste a terminal script, it automatically launches a replay as soon as you click "View".  Currently for Mac in NA only, but it should work for Windows with minimal tampering, and other regions would only require the region code to be detected by the script.
+
+#How to install
+*Install [GreaseMonkey for Firefox](https://addons.mozilla.org/en-us/firefox/addon/greasemonkey/) or [TamperMonkey for Chrome](https://chrome.google.com/webstore/detail/tampermonkey/dhdgffkkebhmkfjojejmpbldmpobfkfo) - these enable you to install custom javascript that is autoloaded instead of having to load it each time
+*Go to [the raw script](https://raw.githubusercontent.com/iggyvolz/ReplayGG-OneClick/master/script.user.js) and install the script through Greasemonkey or Tampermonkey.  The script will auto-update.
+*Install [Lincaster](https://onflapp.wordpress.com/lincastor/) - this allows the browser to run a script whenever it recieves a request to a certain URL (in our case it will be launching replays).  Unzip the zip download it gives you, and then open the application.  You will not need to open it after setting up, but you cannot delete it.
+*Add our LinCastor Scheme.  In LinCaster, press `add new scheme`, title it Replay.GG OneClick (or whatever you want), put `rgg` into the `scheme(s):` box, choose `Shell`, and place the (ReplayGG OneClick script)[https://raw.githubusercontent.com/iggyvolz/ReplayGG-OneClick/master/lcscript] into the box.  Press Save and Activate, and you're good to go.
+*On [Replay.GG](http://www.replay.gg), you should see "Running Replay.GG OneClick version 0.1 by Iggyvolz" at the bottom.
+*Upon clicking `View Replay` for any given North American replay (other regions coming soon), League will automatically launch the replay after a few moments. (pursuant to the same conditions that Replay.GG requires - League of Legends must be open and launched, not necessarily logged in)
