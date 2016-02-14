@@ -13,5 +13,5 @@ if(window.location.pathname.indexOf("/search/na/")===0)
 }
 else if(window.location.pathname==="/")
 {
-    $($(".row")[1]).html($($(".row")[1]).html()+"<div class=\"col-xs-12 text-center\">Running Replay.GG OneClick version 1.0 by Iggyvolz</div>")
+    $($(".row")[1]).html($($(".row")[1]).html()+"<div class=\"col-xs-12 text-center\">Running Replay.GG OneClick version 0.1 by Iggyvolz</div>")
 }
