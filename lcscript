@@ -1,0 +1,5 @@
+#!/bin/sh
+nc -z -v -w5 127.0.0.1 8393 || (export DOEXIT=1;osascript -e 'tell app "System Events" to display dialog "Error - League of Legends is not open"';exit 1) || exit 1
+code=$(curl "www.replay.gg/ajax/replay/$URL_HOST/na"|grep mac|grep -v mac_alt|grep textarea|awk 'match($0,/&#039;[\\x0-9a-f]+/) { print substr($0,RSTART+6,RLENGTH-6) }')
+echo $code|nc 127.0.0.1 8393
+exit 0
