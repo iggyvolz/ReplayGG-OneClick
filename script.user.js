@@ -14,7 +14,7 @@ if(window.location.pathname.indexOf("/search/na/")===0)
         if(a.indexOf("http://www.replay.gg/ajax/replay/")===0)
         {
             var id=a.split("/")[5]
-            alert("rgg://"+id)
+            window.location="rgg://"+id
             $("#modal-view-replay button[data-dismiss=modal].close").click()
         }
         else
